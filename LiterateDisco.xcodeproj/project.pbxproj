@@ -1,0 +1,434 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D07FF261C5DF12E7A36B5388 /* Pods_LiterateDisco.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A22973DDFD2D3A17D10EC6 /* Pods_LiterateDisco.framework */; };
+		F1AEE5E02149F0BD00688ADC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AEE5DF2149F0BD00688ADC /* AppDelegate.swift */; };
+		F1AEE5E22149F0BD00688ADC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AEE5E12149F0BD00688ADC /* ViewController.swift */; };
+		F1AEE5E52149F0BD00688ADC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1AEE5E32149F0BD00688ADC /* Main.storyboard */; };
+		F1AEE5E72149F0BD00688ADC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1AEE5E62149F0BD00688ADC /* Assets.xcassets */; };
+		F1AEE5EA2149F0BD00688ADC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1AEE5E82149F0BD00688ADC /* LaunchScreen.storyboard */; };
+		F1AEE5F22149F1F100688ADC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AEE5F12149F1F100688ADC /* NetworkManager.swift */; };
+		F1AEE5F8214A088200688ADC /* Literate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AEE5F7214A088200688ADC /* Literate.swift */; };
+		F1AEE5FA214A090800688ADC /* Disco.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AEE5F9214A090800688ADC /* Disco.swift */; };
+		F1AEE5FC214A110C00688ADC /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AEE5FB214A110C00688ADC /* MainTableViewCell.swift */; };
+		F1D7A2D7214B5C7800D89178 /* NetworkServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D7A2D6214B5C7800D89178 /* NetworkServiceDelegate.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0C270E114D3FBABA1A8DBBD1 /* Pods-LiterateDisco.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiterateDisco.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiterateDisco/Pods-LiterateDisco.debug.xcconfig"; sourceTree = "<group>"; };
+		1F538A8558623C4A2EBB13B8 /* Pods-LiterateDisco.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiterateDisco.release.xcconfig"; path = "Pods/Target Support Files/Pods-LiterateDisco/Pods-LiterateDisco.release.xcconfig"; sourceTree = "<group>"; };
+		78A22973DDFD2D3A17D10EC6 /* Pods_LiterateDisco.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LiterateDisco.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1AEE5DC2149F0BD00688ADC /* LiterateDisco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiterateDisco.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1AEE5DF2149F0BD00688ADC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F1AEE5E12149F0BD00688ADC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F1AEE5E42149F0BD00688ADC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F1AEE5E62149F0BD00688ADC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F1AEE5E92149F0BD00688ADC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F1AEE5EB2149F0BD00688ADC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1AEE5F12149F1F100688ADC /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F1AEE5F7214A088200688ADC /* Literate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Literate.swift; sourceTree = "<group>"; };
+		F1AEE5F9214A090800688ADC /* Disco.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disco.swift; sourceTree = "<group>"; };
+		F1AEE5FB214A110C00688ADC /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		F1D7A2D6214B5C7800D89178 /* NetworkServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceDelegate.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F1AEE5D92149F0BD00688ADC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D07FF261C5DF12E7A36B5388 /* Pods_LiterateDisco.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		226425A9DD3A0C952F1BE05F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78A22973DDFD2D3A17D10EC6 /* Pods_LiterateDisco.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4C4CF555E4B6E60D220350CC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0C270E114D3FBABA1A8DBBD1 /* Pods-LiterateDisco.debug.xcconfig */,
+				1F538A8558623C4A2EBB13B8 /* Pods-LiterateDisco.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F1AEE5D32149F0BC00688ADC = {
+			isa = PBXGroup;
+			children = (
+				F1AEE5DE2149F0BD00688ADC /* LiterateDisco */,
+				F1AEE5DD2149F0BD00688ADC /* Products */,
+				4C4CF555E4B6E60D220350CC /* Pods */,
+				226425A9DD3A0C952F1BE05F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F1AEE5DD2149F0BD00688ADC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F1AEE5DC2149F0BD00688ADC /* LiterateDisco.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F1AEE5DE2149F0BD00688ADC /* LiterateDisco */ = {
+			isa = PBXGroup;
+			children = (
+				F1AEE5DF2149F0BD00688ADC /* AppDelegate.swift */,
+				F1AEE5E12149F0BD00688ADC /* ViewController.swift */,
+				F1AEE5F9214A090800688ADC /* Disco.swift */,
+				F1AEE5F7214A088200688ADC /* Literate.swift */,
+				F1AEE5E32149F0BD00688ADC /* Main.storyboard */,
+				F1AEE5FB214A110C00688ADC /* MainTableViewCell.swift */,
+				F1AEE5F12149F1F100688ADC /* NetworkManager.swift */,
+				F1D7A2D6214B5C7800D89178 /* NetworkServiceDelegate.swift */,
+				F1AEE5E62149F0BD00688ADC /* Assets.xcassets */,
+				F1AEE5E82149F0BD00688ADC /* LaunchScreen.storyboard */,
+				F1AEE5EB2149F0BD00688ADC /* Info.plist */,
+			);
+			path = LiterateDisco;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F1AEE5DB2149F0BD00688ADC /* LiterateDisco */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1AEE5EE2149F0BD00688ADC /* Build configuration list for PBXNativeTarget "LiterateDisco" */;
+			buildPhases = (
+				4338BD03CB3243D3367865EC /* [CP] Check Pods Manifest.lock */,
+				F1AEE5D82149F0BD00688ADC /* Sources */,
+				F1AEE5D92149F0BD00688ADC /* Frameworks */,
+				F1AEE5DA2149F0BD00688ADC /* Resources */,
+				ADBCEC2FEDCDBB26386005E5 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LiterateDisco;
+			productName = LiterateDisco;
+			productReference = F1AEE5DC2149F0BD00688ADC /* LiterateDisco.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F1AEE5D42149F0BC00688ADC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Nathan Wainwright";
+				TargetAttributes = {
+					F1AEE5DB2149F0BD00688ADC = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = F1AEE5D72149F0BC00688ADC /* Build configuration list for PBXProject "LiterateDisco" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F1AEE5D32149F0BC00688ADC;
+			productRefGroup = F1AEE5DD2149F0BD00688ADC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F1AEE5DB2149F0BD00688ADC /* LiterateDisco */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F1AEE5DA2149F0BD00688ADC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1AEE5EA2149F0BD00688ADC /* LaunchScreen.storyboard in Resources */,
+				F1AEE5E72149F0BD00688ADC /* Assets.xcassets in Resources */,
+				F1AEE5E52149F0BD00688ADC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4338BD03CB3243D3367865EC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LiterateDisco-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADBCEC2FEDCDBB26386005E5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LiterateDisco/Pods-LiterateDisco-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LiterateDisco/Pods-LiterateDisco-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F1AEE5D82149F0BD00688ADC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1AEE5FA214A090800688ADC /* Disco.swift in Sources */,
+				F1D7A2D7214B5C7800D89178 /* NetworkServiceDelegate.swift in Sources */,
+				F1AEE5F22149F1F100688ADC /* NetworkManager.swift in Sources */,
+				F1AEE5E22149F0BD00688ADC /* ViewController.swift in Sources */,
+				F1AEE5F8214A088200688ADC /* Literate.swift in Sources */,
+				F1AEE5FC214A110C00688ADC /* MainTableViewCell.swift in Sources */,
+				F1AEE5E02149F0BD00688ADC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F1AEE5E32149F0BD00688ADC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F1AEE5E42149F0BD00688ADC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F1AEE5E82149F0BD00688ADC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F1AEE5E92149F0BD00688ADC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F1AEE5EC2149F0BD00688ADC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F1AEE5ED2149F0BD00688ADC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F1AEE5EF2149F0BD00688ADC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C270E114D3FBABA1A8DBBD1 /* Pods-LiterateDisco.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2NZS2JX86Q;
+				INFOPLIST_FILE = LiterateDisco/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ca.nathanwainwright.LiterateDisco;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F1AEE5F02149F0BD00688ADC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F538A8558623C4A2EBB13B8 /* Pods-LiterateDisco.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2NZS2JX86Q;
+				INFOPLIST_FILE = LiterateDisco/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ca.nathanwainwright.LiterateDisco;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F1AEE5D72149F0BC00688ADC /* Build configuration list for PBXProject "LiterateDisco" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1AEE5EC2149F0BD00688ADC /* Debug */,
+				F1AEE5ED2149F0BD00688ADC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1AEE5EE2149F0BD00688ADC /* Build configuration list for PBXNativeTarget "LiterateDisco" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1AEE5EF2149F0BD00688ADC /* Debug */,
+				F1AEE5F02149F0BD00688ADC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F1AEE5D42149F0BC00688ADC /* Project object */;
+}
