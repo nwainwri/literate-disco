@@ -9,13 +9,6 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, NetworkServiceDelegate{
-
-  
-
-  
-
-  
-
   
   @IBOutlet weak var mainTableView: UITableView!
   var photoOne = Disco()
@@ -24,42 +17,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   var authorReturn:String = ""
   var quoteReturn:String = ""
   
-  
+  var photoURLReturn:String = ""
   
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
     let networker = NetworkManager()
-    networker.netDelegate = self as! NetworkServiceDelegate
+    networker.netDelegate = self as NetworkServiceDelegate
     
     mainTableView.delegate = self
     mainTableView.dataSource = self
-    
-    
 
-    photoOne.image = networker.getPhoto()
-    
-    
-//    let quoteOne = Literate()
     let tempTuple = networker.getQuote()
-    
-//    networker.netDelegate
-//    quoteOne.author = tempTuple.author
-//    quoteOne.quote = tempTuple.quote
-    
-    
-    
-    
-    
-    
-//
-//    var reply = didComplete()
-//    print("TEST THIS: \(reply)")
+    print("QUOTE: \(tempTuple)")
+
+    let testPhoto = networker.getPhoto()
+    print("TEST: \(testPhoto)")
 
   }
-  
-  
-
   
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
@@ -67,15 +42,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   }
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 3
+    return 1
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
     let cell = mainTableView.dequeueReusableCell(withIdentifier: "mainCell", for: indexPath) as! MainTableViewCell
     cell.textLabel?.text = authorReturn
-    cell.detailTextLabel?.text = quoteReturn
-    cell.imageView?.image = photoOne.image
+    cell.detailTextLabel?.text = photoURLReturn
+//    cell.imageView?.image = photoOne
     
     return cell
   }
@@ -84,7 +59,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 //  func didComplete() -> (author: String, quote: String) {
 //    authorReturn =
 //  }
-  func didComplete(author: String, quote: String) {
+  func didGetQuote(author: String, quote: String) {
     authorReturn = author
     quoteReturn = quote
     
@@ -93,6 +68,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
   }
   
+  func didGetPhotoURL(photoURL: String) {
+    photoURLReturn = photoURL
+    DispatchQueue.main.async {
+      self.mainTableView.reloadData()
+    }
+  }
 
 }
 
