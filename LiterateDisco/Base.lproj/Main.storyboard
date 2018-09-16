@@ -73,7 +73,7 @@
                                             <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="tlN-lw-X3D" kind="show" id="vxk-WX-kr7"/>
+                                            <segue destination="tlN-lw-X3D" kind="show" identifier="mainViewSegue" id="vxk-WX-kr7"/>
                                         </connections>
                                     </button>
                                 </subviews>

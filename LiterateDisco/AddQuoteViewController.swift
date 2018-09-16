@@ -9,14 +9,15 @@
 import UIKit
 import Nuke
 
+protocol AddQuoteViewControllerDelegate: AnyObject {
+  func didFinishTask(sender: AddQuoteViewController)
+}
+
 class AddQuoteViewController: UIViewController, NetworkServiceDelegate {
-  
+
   @IBOutlet weak var quoteContentView: QuoteView!
-  
   @IBOutlet weak var newQuoteButtonPressed: UIButton!
-  
   @IBOutlet weak var newPhotoButtonPressed: UIButton!
-  
   
   var photoOne = Disco()
   var quoteOne = Literate()
@@ -28,9 +29,12 @@ class AddQuoteViewController: UIViewController, NetworkServiceDelegate {
   
   var networker = NetworkManager()
   
+//  var addQuoteDelegate: AddQuoteDelegate?
+  
+  weak var delegate:ViewController?
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    
     //      let networker = NetworkManager()
     networker.netDelegate = self as NetworkServiceDelegate
     //      photoOne = networker.getPhoto()
@@ -41,10 +45,12 @@ class AddQuoteViewController: UIViewController, NetworkServiceDelegate {
     quoteOne.author = quoteOne.author
     quoteOne.quote = quoteOne.quote
     
-    //      let tempPhoto = networker.getPhoto()
+//    let addQuoteViewController = AddQuoteViewController()
+//    addQuoteViewController.delegate = self
     
+    
+    //      let tempPhoto = networker.getPhoto()
     //      didGetPhotoURL(photoURL: photoOne.imageLocation)
-    //
     //      didGetQuote(author: quoteOne.author, quote: quoteOne.quote)
     
     quoteContentView.authorLabel.text = authorReturn
@@ -90,19 +96,21 @@ class AddQuoteViewController: UIViewController, NetworkServiceDelegate {
   }
   
   // MARK: BUTTON ACTIONS
-  
   @IBAction func quoteButtonAction(_ sender: UIButton) {
     quoteOne = networker.getQuote()
   }
-  
   
   @IBAction func photoButtonAction(_ sender: UIButton) {
     photoOne = networker.getPhoto()
   }
   
   @IBAction func saveButtonAction(_ sender: UIButton) {
+//    self.addQuoteDelegate?.saveDiscoLiterate(disco: photoOne, literate: quoteOne)
+    dismiss(animated: true, completion: nil)
+//    performSegue(withIdentifier: "mainViewSegue", sender: self)
   }
   
+
   
   
   

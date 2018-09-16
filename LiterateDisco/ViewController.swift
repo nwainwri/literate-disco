@@ -8,7 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, NetworkServiceDelegate{
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, NetworkServiceDelegate, AddQuoteDelegate{
+  
   
   @IBOutlet weak var mainTableView: UITableView!
   var photoOne = Disco()
@@ -19,6 +20,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   
   var photoURLReturn:String = ""
   
+  var discoLiterateArray = Array<Any>()
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
@@ -27,6 +30,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     mainTableView.delegate = self
     mainTableView.dataSource = self
+    
+    
+    
+    
 
 //    let tempTuple = networker.getQuote()
 //    print("QUOTE: \(tempTuple)")
@@ -73,6 +80,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     DispatchQueue.main.async {
       self.mainTableView.reloadData()
     }
+  }
+
+  func saveDiscoLiterate(disco: Disco, literate: Literate) {
+    discoLiterateArray.append([disco, literate])
+    print("TEST ARRAY: \(discoLiterateArray)")
+    //get stuff here
   }
 
 }

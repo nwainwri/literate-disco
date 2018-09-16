@@ -10,15 +10,10 @@ import UIKit
 
 class MainTableViewCell: UITableViewCell {
   
-  
   @IBOutlet weak var quoteLabel: UILabel!
-  
   @IBOutlet weak var authorLabel: UILabel!
-  
-  
   @IBOutlet weak var quoteImage: UIImageView!
   
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

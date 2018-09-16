@@ -9,7 +9,6 @@
 import UIKit
 
 class Disco: NSObject {
-  
   var imageLocation = String()
 
 }
