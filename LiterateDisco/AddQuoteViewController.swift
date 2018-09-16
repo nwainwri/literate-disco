@@ -48,7 +48,7 @@ class AddQuoteViewController: UIViewController, NetworkServiceDelegate {
   // MARK: NetworkDelegate Functions
   func didGetQuote(author: String, quote: String) {
     authorReturn = String(describing: author)
-    quoteReturn = quote
+    quoteReturn = String(describing: quote)
     
     DispatchQueue.main.async {
 //      self.authorReturn = author
@@ -59,7 +59,8 @@ class AddQuoteViewController: UIViewController, NetworkServiceDelegate {
 //        self.authorReturn = author
 //      }
       
-      self.quoteContentView.authorLabel.text = self.authorReturn
+      self.quoteContentView.authorLabel.text? = self.authorReturn
+      self.quoteContentView.quoteLabel.text? = self.quoteReturn
       self.quoteContentView.authorLabel.reloadInputViews()
       self.quoteContentView.quoteLabel.reloadInputViews()
       

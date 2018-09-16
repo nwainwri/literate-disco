@@ -24,11 +24,16 @@ class NetworkManager {
   // QUOTE RANDOM; POST:
   // http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json
   
-  
-  func getQuote() -> (author: String, quote: String){
+  // MARK: HAVE THIS RETURN A 'LITERATE' TUPLE
+  func getQuote() -> (Literate){
+//    func getQuote() -> (author: String, quote: String){
+    let quoteReturned = Literate()
+    
     var replyData: (author: String, quote: String)
-    replyData.0 = ""
-    replyData.1 = ""
+    
+    
+    replyData.author = ""
+    replyData.quote = ""
 
     let url = URL(string: "https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json")!
     let request = NSMutableURLRequest(url: url)
@@ -58,20 +63,25 @@ class NetworkManager {
         return
       }
       // GRAB HERE
-      print("title:: \(String(describing: json["quoteAuthor"]))")
       
-      print("title:: \(String(describing: json["quoteText"]))")
+      quoteReturned.author = json["quoteAuthor"] as! String
+      quoteReturned.quote = json["quoteText"] as! String
       
-      replyData.0 = String(describing: json["quoteAuthor"])
-      replyData.1 = String(describing: json["quoteText"])
+      replyData.author = json["quoteAuthor"] as! String
+      replyData.quote = json["quoteText"] as! String
+      print("title:: \(replyData.author)")
+      
+      print("title:: \(replyData.quote)")
+      
+      
       // need to put in delete to notify main page once data received.
-      
-      self.netDelegate?.didGetQuote(author: replyData.0, quote: replyData.1)
+      // MARK: UPATE DELEGATE TO PASS AROUND LITERATE OBJECTS
+      self.netDelegate?.didGetQuote(author: replyData.author, quote: replyData.quote)
     }
     task.resume()
     
   
-    return (replyData.0, replyData.1)
+    return quoteReturned
   }
   
   func getPhoto() -> Disco {
