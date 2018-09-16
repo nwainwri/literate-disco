@@ -17,6 +17,9 @@
 		F1AEE5F8214A088200688ADC /* Literate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AEE5F7214A088200688ADC /* Literate.swift */; };
 		F1AEE5FA214A090800688ADC /* Disco.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AEE5F9214A090800688ADC /* Disco.swift */; };
 		F1AEE5FC214A110C00688ADC /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AEE5FB214A110C00688ADC /* MainTableViewCell.swift */; };
+		F1CB5916214E215B00C72F14 /* QuoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1CB5915214E215B00C72F14 /* QuoteView.xib */; };
+		F1CB5918214E294400C72F14 /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CB5917214E294400C72F14 /* QuoteView.swift */; };
+		F1CB591A214E2BF400C72F14 /* AddQuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CB5919214E2BF400C72F14 /* AddQuoteViewController.swift */; };
 		F1D7A2D7214B5C7800D89178 /* NetworkServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D7A2D6214B5C7800D89178 /* NetworkServiceDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +38,9 @@
 		F1AEE5F7214A088200688ADC /* Literate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Literate.swift; sourceTree = "<group>"; };
 		F1AEE5F9214A090800688ADC /* Disco.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disco.swift; sourceTree = "<group>"; };
 		F1AEE5FB214A110C00688ADC /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		F1CB5915214E215B00C72F14 /* QuoteView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuoteView.xib; sourceTree = "<group>"; };
+		F1CB5917214E294400C72F14 /* QuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteView.swift; sourceTree = "<group>"; };
+		F1CB5919214E2BF400C72F14 /* AddQuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuoteViewController.swift; sourceTree = "<group>"; };
 		F1D7A2D6214B5C7800D89178 /* NetworkServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +99,9 @@
 				F1AEE5F9214A090800688ADC /* Disco.swift */,
 				F1AEE5F7214A088200688ADC /* Literate.swift */,
 				F1AEE5E32149F0BD00688ADC /* Main.storyboard */,
+				F1CB5919214E2BF400C72F14 /* AddQuoteViewController.swift */,
+				F1CB5915214E215B00C72F14 /* QuoteView.xib */,
+				F1CB5917214E294400C72F14 /* QuoteView.swift */,
 				F1AEE5FB214A110C00688ADC /* MainTableViewCell.swift */,
 				F1AEE5F12149F1F100688ADC /* NetworkManager.swift */,
 				F1D7A2D6214B5C7800D89178 /* NetworkServiceDelegate.swift */,
@@ -166,6 +175,7 @@
 				F1AEE5EA2149F0BD00688ADC /* LaunchScreen.storyboard in Resources */,
 				F1AEE5E72149F0BD00688ADC /* Assets.xcassets in Resources */,
 				F1AEE5E52149F0BD00688ADC /* Main.storyboard in Resources */,
+				F1CB5916214E215B00C72F14 /* QuoteView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,15 +187,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-LiterateDisco-checkManifestLockResult.txt",
 			);
@@ -199,15 +205,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LiterateDisco/Pods-LiterateDisco-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
 			);
@@ -226,9 +228,11 @@
 				F1AEE5FA214A090800688ADC /* Disco.swift in Sources */,
 				F1D7A2D7214B5C7800D89178 /* NetworkServiceDelegate.swift in Sources */,
 				F1AEE5F22149F1F100688ADC /* NetworkManager.swift in Sources */,
+				F1CB5918214E294400C72F14 /* QuoteView.swift in Sources */,
 				F1AEE5E22149F0BD00688ADC /* ViewController.swift in Sources */,
 				F1AEE5F8214A088200688ADC /* Literate.swift in Sources */,
 				F1AEE5FC214A110C00688ADC /* MainTableViewCell.swift in Sources */,
+				F1CB591A214E2BF400C72F14 /* AddQuoteViewController.swift in Sources */,
 				F1AEE5E02149F0BD00688ADC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

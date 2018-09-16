@@ -28,11 +28,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     mainTableView.delegate = self
     mainTableView.dataSource = self
 
-    let tempTuple = networker.getQuote()
-    print("QUOTE: \(tempTuple)")
+//    let tempTuple = networker.getQuote()
+//    print("QUOTE: \(tempTuple)")
 
-    let testPhoto = networker.getPhoto()
-    print("TEST: \(testPhoto)")
+//    let testPhoto = networker.getPhoto()
+//    print("TEST: \(testPhoto)")
 
   }
   
