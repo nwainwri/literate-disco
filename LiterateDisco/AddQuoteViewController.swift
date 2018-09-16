@@ -9,12 +9,8 @@
 import UIKit
 import Nuke
 
-protocol AddQuoteViewControllerDelegate: AnyObject {
-  func didFinishTask(sender: AddQuoteViewController)
-}
-
 class AddQuoteViewController: UIViewController, NetworkServiceDelegate {
-
+  
   @IBOutlet weak var quoteContentView: QuoteView!
   @IBOutlet weak var newQuoteButtonPressed: UIButton!
   @IBOutlet weak var newPhotoButtonPressed: UIButton!
@@ -28,30 +24,17 @@ class AddQuoteViewController: UIViewController, NetworkServiceDelegate {
   var photoURLReturn:String = ""
   
   var networker = NetworkManager()
-  
-//  var addQuoteDelegate: AddQuoteDelegate?
-  
-  weak var delegate:ViewController?
-  
+    
   override func viewDidLoad() {
     super.viewDidLoad()
-    //      let networker = NetworkManager()
+    
     networker.netDelegate = self as NetworkServiceDelegate
-    //      photoOne = networker.getPhoto()
-    //      let tempTuple = networker.getQuote()
+    
     photoOne = networker.getPhoto()
     quoteOne = networker.getQuote()
     
     quoteOne.author = quoteOne.author
     quoteOne.quote = quoteOne.quote
-    
-//    let addQuoteViewController = AddQuoteViewController()
-//    addQuoteViewController.delegate = self
-    
-    
-    //      let tempPhoto = networker.getPhoto()
-    //      didGetPhotoURL(photoURL: photoOne.imageLocation)
-    //      didGetQuote(author: quoteOne.author, quote: quoteOne.quote)
     
     quoteContentView.authorLabel.text = authorReturn
     quoteContentView.quoteLabel.text = quoteReturn
@@ -68,19 +51,9 @@ class AddQuoteViewController: UIViewController, NetworkServiceDelegate {
   func didGetQuote(author: String, quote: String) {
     authorReturn = String(describing: author)
     quoteReturn = String(describing: quote)
-    
     DispatchQueue.main.async {
-      //      self.authorReturn = author
-      //      self.quoteReturn = quote
-      //      self.quoteContentView.authorLabel.text = author
-      //      self.quoteContentView.quoteLabel.text = quote
-      //      guard let author = author else {
-      //        self.authorReturn = author
-      //      }
       self.quoteContentView.authorLabel.text? = self.authorReturn
       self.quoteContentView.quoteLabel.text? = self.quoteReturn
-      //      self.quoteContentView.authorLabel.reloadInputViews()
-      //      self.quoteContentView.quoteLabel.reloadInputViews()
       self.quoteContentView.reloadInputViews()
     }
   }
@@ -105,14 +78,10 @@ class AddQuoteViewController: UIViewController, NetworkServiceDelegate {
   }
   
   @IBAction func saveButtonAction(_ sender: UIButton) {
-//    self.addQuoteDelegate?.saveDiscoLiterate(disco: photoOne, literate: quoteOne)
+    //    self.addQuoteDelegate?.saveDiscoLiterate(disco: photoOne, literate: quoteOne)
     dismiss(animated: true, completion: nil)
-//    performSegue(withIdentifier: "mainViewSegue", sender: self)
+    //    performSegue(withIdentifier: "mainViewSegue", sender: self)
   }
-  
-
-  
-  
   
   
   /*

@@ -8,8 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, NetworkServiceDelegate, AddQuoteDelegate{
-  
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, NetworkServiceDelegate {
   
   @IBOutlet weak var mainTableView: UITableView!
   var photoOne = Disco()
@@ -30,16 +29,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     mainTableView.delegate = self
     mainTableView.dataSource = self
-    
-    
-    
-    
 
-//    let tempTuple = networker.getQuote()
-//    print("QUOTE: \(tempTuple)")
-
-//    let testPhoto = networker.getPhoto()
-//    print("TEST: \(testPhoto)")
 
   }
   
@@ -57,19 +47,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let cell = mainTableView.dequeueReusableCell(withIdentifier: "mainCell", for: indexPath) as! MainTableViewCell
     cell.textLabel?.text = authorReturn
     cell.detailTextLabel?.text = photoURLReturn
-//    cell.imageView?.image = photoOne
     
     return cell
   }
-  
-////  // NETWORK DELEGATE
-//  func didComplete() -> (author: String, quote: String) {
-//    authorReturn =
-//  }
+
+  // MARK: network delegate functions
   func didGetQuote(author: String, quote: String) {
     authorReturn = author
     quoteReturn = quote
-    
     DispatchQueue.main.async {
       self.mainTableView.reloadData()
     }
@@ -80,12 +65,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     DispatchQueue.main.async {
       self.mainTableView.reloadData()
     }
-  }
-
-  func saveDiscoLiterate(disco: Disco, literate: Literate) {
-    discoLiterateArray.append([disco, literate])
-    print("TEST ARRAY: \(discoLiterateArray)")
-    //get stuff here
   }
 
 }

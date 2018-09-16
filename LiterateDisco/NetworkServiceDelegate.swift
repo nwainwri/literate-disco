@@ -10,9 +10,5 @@ import Foundation
 
 protocol NetworkServiceDelegate {
   func didGetQuote(author: String, quote: String)
-  
   func didGetPhotoURL(photoURL: String)
-
 }
-
-

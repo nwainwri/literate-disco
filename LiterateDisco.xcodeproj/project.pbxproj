@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D07FF261C5DF12E7A36B5388 /* Pods_LiterateDisco.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A22973DDFD2D3A17D10EC6 /* Pods_LiterateDisco.framework */; };
-		F15FF9A1214EEB7E001DFBD1 /* AddQuoteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15FF9A0214EEB7E001DFBD1 /* AddQuoteProtocol.swift */; };
-		F15FF9A3214EF750001DFBD1 /* ViewController+AddQuoteViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15FF9A2214EF750001DFBD1 /* ViewController+AddQuoteViewDelegate.swift */; };
 		F1AEE5E02149F0BD00688ADC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AEE5DF2149F0BD00688ADC /* AppDelegate.swift */; };
 		F1AEE5E22149F0BD00688ADC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AEE5E12149F0BD00688ADC /* ViewController.swift */; };
 		F1AEE5E52149F0BD00688ADC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1AEE5E32149F0BD00688ADC /* Main.storyboard */; };
@@ -29,8 +27,6 @@
 		0C270E114D3FBABA1A8DBBD1 /* Pods-LiterateDisco.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiterateDisco.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiterateDisco/Pods-LiterateDisco.debug.xcconfig"; sourceTree = "<group>"; };
 		1F538A8558623C4A2EBB13B8 /* Pods-LiterateDisco.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiterateDisco.release.xcconfig"; path = "Pods/Target Support Files/Pods-LiterateDisco/Pods-LiterateDisco.release.xcconfig"; sourceTree = "<group>"; };
 		78A22973DDFD2D3A17D10EC6 /* Pods_LiterateDisco.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LiterateDisco.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F15FF9A0214EEB7E001DFBD1 /* AddQuoteProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuoteProtocol.swift; sourceTree = "<group>"; };
-		F15FF9A2214EF750001DFBD1 /* ViewController+AddQuoteViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+AddQuoteViewDelegate.swift"; sourceTree = "<group>"; };
 		F1AEE5DC2149F0BD00688ADC /* LiterateDisco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiterateDisco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1AEE5DF2149F0BD00688ADC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1AEE5E12149F0BD00688ADC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,7 +96,6 @@
 			children = (
 				F1AEE5DF2149F0BD00688ADC /* AppDelegate.swift */,
 				F1AEE5E12149F0BD00688ADC /* ViewController.swift */,
-				F15FF9A2214EF750001DFBD1 /* ViewController+AddQuoteViewDelegate.swift */,
 				F1AEE5F9214A090800688ADC /* Disco.swift */,
 				F1AEE5F7214A088200688ADC /* Literate.swift */,
 				F1AEE5E32149F0BD00688ADC /* Main.storyboard */,
@@ -109,7 +104,6 @@
 				F1CB5917214E294400C72F14 /* QuoteView.swift */,
 				F1AEE5FB214A110C00688ADC /* MainTableViewCell.swift */,
 				F1AEE5F12149F1F100688ADC /* NetworkManager.swift */,
-				F15FF9A0214EEB7E001DFBD1 /* AddQuoteProtocol.swift */,
 				F1D7A2D6214B5C7800D89178 /* NetworkServiceDelegate.swift */,
 				F1AEE5E62149F0BD00688ADC /* Assets.xcassets */,
 				F1AEE5E82149F0BD00688ADC /* LaunchScreen.storyboard */,
@@ -231,12 +225,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F15FF9A1214EEB7E001DFBD1 /* AddQuoteProtocol.swift in Sources */,
 				F1AEE5FA214A090800688ADC /* Disco.swift in Sources */,
 				F1D7A2D7214B5C7800D89178 /* NetworkServiceDelegate.swift in Sources */,
 				F1AEE5F22149F1F100688ADC /* NetworkManager.swift in Sources */,
 				F1CB5918214E294400C72F14 /* QuoteView.swift in Sources */,
-				F15FF9A3214EF750001DFBD1 /* ViewController+AddQuoteViewDelegate.swift in Sources */,
 				F1AEE5E22149F0BD00688ADC /* ViewController.swift in Sources */,
 				F1AEE5F8214A088200688ADC /* Literate.swift in Sources */,
 				F1AEE5FC214A110C00688ADC /* MainTableViewCell.swift in Sources */,
