@@ -91,8 +91,8 @@ class AddQuoteViewController: UIViewController, NetworkServiceDelegate {
     finishedQuote.quote = quoteOne.quote
     finishedQuote.photo = image
     
-//    print(image)
-//    print(finishedQuote)
+    print(image)
+    print(finishedQuote)
 //    discoDelegate?.finshedDance(finished: finishedQuote)
     
     dismiss(animated: true, completion: nil)
