@@ -9,5 +9,5 @@
 import Foundation
 
 protocol DiscoDanceDelegate {
-  func finshedDance(finished: DeadDiscoLiterate)
+  func finshedDance(finished: FinishedQuote)
 }

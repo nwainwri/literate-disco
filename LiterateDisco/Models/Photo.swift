@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Disco: NSObject {
+class Photo: NSObject {
   var imageLocation = String()
 
 }

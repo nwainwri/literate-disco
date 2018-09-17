@@ -73,7 +73,7 @@
                                             <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="tlN-lw-X3D" kind="show" identifier="mainViewSegue" id="vxk-WX-kr7"/>
+                                            <action selector="addButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L9o-b4-eNV"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -99,6 +99,7 @@
                     </view>
                     <connections>
                         <outlet property="mainTableView" destination="dK6-Hw-0kd" id="DH7-SA-HdZ"/>
+                        <segue destination="tlN-lw-X3D" kind="show" identifier="addVCSegue" id="XxA-Fl-dFf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

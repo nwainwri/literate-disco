@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Literate: NSObject {
+class Quote: NSObject {
   // for quotes
   
   var author = String()

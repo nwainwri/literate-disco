@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D07FF261C5DF12E7A36B5388 /* Pods_LiterateDisco.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A22973DDFD2D3A17D10EC6 /* Pods_LiterateDisco.framework */; };
-		F15FF9A6214F2777001DFBD1 /* DeadDiscoLiterate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15FF9A5214F2777001DFBD1 /* DeadDiscoLiterate.swift */; };
+		F15FF9A6214F2777001DFBD1 /* FinishedQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15FF9A5214F2777001DFBD1 /* FinishedQuote.swift */; };
 		F15FF9A8214F28D1001DFBD1 /* DiscoDanceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15FF9A7214F28D1001DFBD1 /* DiscoDanceDelegate.swift */; };
 		F1AEE5E02149F0BD00688ADC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AEE5DF2149F0BD00688ADC /* AppDelegate.swift */; };
 		F1AEE5E22149F0BD00688ADC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AEE5E12149F0BD00688ADC /* ViewController.swift */; };
@@ -16,8 +16,8 @@
 		F1AEE5E72149F0BD00688ADC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1AEE5E62149F0BD00688ADC /* Assets.xcassets */; };
 		F1AEE5EA2149F0BD00688ADC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1AEE5E82149F0BD00688ADC /* LaunchScreen.storyboard */; };
 		F1AEE5F22149F1F100688ADC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AEE5F12149F1F100688ADC /* NetworkManager.swift */; };
-		F1AEE5F8214A088200688ADC /* Literate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AEE5F7214A088200688ADC /* Literate.swift */; };
-		F1AEE5FA214A090800688ADC /* Disco.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AEE5F9214A090800688ADC /* Disco.swift */; };
+		F1AEE5F8214A088200688ADC /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AEE5F7214A088200688ADC /* Quote.swift */; };
+		F1AEE5FA214A090800688ADC /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AEE5F9214A090800688ADC /* Photo.swift */; };
 		F1AEE5FC214A110C00688ADC /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AEE5FB214A110C00688ADC /* MainTableViewCell.swift */; };
 		F1CB5916214E215B00C72F14 /* QuoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1CB5915214E215B00C72F14 /* QuoteView.xib */; };
 		F1CB5918214E294400C72F14 /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CB5917214E294400C72F14 /* QuoteView.swift */; };
@@ -29,7 +29,7 @@
 		0C270E114D3FBABA1A8DBBD1 /* Pods-LiterateDisco.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiterateDisco.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiterateDisco/Pods-LiterateDisco.debug.xcconfig"; sourceTree = "<group>"; };
 		1F538A8558623C4A2EBB13B8 /* Pods-LiterateDisco.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiterateDisco.release.xcconfig"; path = "Pods/Target Support Files/Pods-LiterateDisco/Pods-LiterateDisco.release.xcconfig"; sourceTree = "<group>"; };
 		78A22973DDFD2D3A17D10EC6 /* Pods_LiterateDisco.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LiterateDisco.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F15FF9A5214F2777001DFBD1 /* DeadDiscoLiterate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadDiscoLiterate.swift; sourceTree = "<group>"; };
+		F15FF9A5214F2777001DFBD1 /* FinishedQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedQuote.swift; sourceTree = "<group>"; };
 		F15FF9A7214F28D1001DFBD1 /* DiscoDanceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoDanceDelegate.swift; sourceTree = "<group>"; };
 		F1AEE5DC2149F0BD00688ADC /* LiterateDisco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiterateDisco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1AEE5DF2149F0BD00688ADC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,8 +39,8 @@
 		F1AEE5E92149F0BD00688ADC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1AEE5EB2149F0BD00688ADC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1AEE5F12149F1F100688ADC /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		F1AEE5F7214A088200688ADC /* Literate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Literate.swift; sourceTree = "<group>"; };
-		F1AEE5F9214A090800688ADC /* Disco.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disco.swift; sourceTree = "<group>"; };
+		F1AEE5F7214A088200688ADC /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		F1AEE5F9214A090800688ADC /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		F1AEE5FB214A110C00688ADC /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		F1CB5915214E215B00C72F14 /* QuoteView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuoteView.xib; sourceTree = "<group>"; };
 		F1CB5917214E294400C72F14 /* QuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteView.swift; sourceTree = "<group>"; };
@@ -80,9 +80,9 @@
 		F15FF9A4214F2741001DFBD1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F1AEE5F9214A090800688ADC /* Disco.swift */,
-				F1AEE5F7214A088200688ADC /* Literate.swift */,
-				F15FF9A5214F2777001DFBD1 /* DeadDiscoLiterate.swift */,
+				F1AEE5F9214A090800688ADC /* Photo.swift */,
+				F1AEE5F7214A088200688ADC /* Quote.swift */,
+				F15FF9A5214F2777001DFBD1 /* FinishedQuote.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -239,13 +239,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1AEE5FA214A090800688ADC /* Disco.swift in Sources */,
+				F1AEE5FA214A090800688ADC /* Photo.swift in Sources */,
 				F1D7A2D7214B5C7800D89178 /* NetworkServiceDelegate.swift in Sources */,
 				F1AEE5F22149F1F100688ADC /* NetworkManager.swift in Sources */,
 				F1CB5918214E294400C72F14 /* QuoteView.swift in Sources */,
-				F15FF9A6214F2777001DFBD1 /* DeadDiscoLiterate.swift in Sources */,
+				F15FF9A6214F2777001DFBD1 /* FinishedQuote.swift in Sources */,
 				F1AEE5E22149F0BD00688ADC /* ViewController.swift in Sources */,
-				F1AEE5F8214A088200688ADC /* Literate.swift in Sources */,
+				F1AEE5F8214A088200688ADC /* Quote.swift in Sources */,
 				F1AEE5FC214A110C00688ADC /* MainTableViewCell.swift in Sources */,
 				F1CB591A214E2BF400C72F14 /* AddQuoteViewController.swift in Sources */,
 				F15FF9A8214F28D1001DFBD1 /* DiscoDanceDelegate.swift in Sources */,

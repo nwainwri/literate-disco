@@ -19,9 +19,9 @@ class NetworkManager {
   // http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json
   
   // MARK: HAVE THIS RETURN A 'LITERATE' TUPLE
-  func getQuote() -> (Literate){
+  func getQuote() -> (Quote){
     //    func getQuote() -> (author: String, quote: String){
-    let quoteReturned = Literate()
+    let quoteReturned = Quote()
     
     var replyData: (author: String, quote: String)
     
@@ -74,8 +74,8 @@ class NetworkManager {
     return quoteReturned
   }
   
-  func getPhoto() -> Disco {
-    let photoGotten = Disco()
+  func getPhoto() -> Photo {
+    let photoGotten = Photo()
     
     let url = URL(string: "https://api.imgur.com/3/gallery/hOF1g")!
     //    ## how to get a gallery on imgur

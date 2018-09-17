@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DeadDiscoLiterate: NSObject {
+class FinishedQuote: NSObject {
   
   var author = String()
   var quote = String()

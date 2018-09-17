@@ -9,15 +9,20 @@
 import UIKit
 import Nuke
 
+protocol AddQuoteViewControllerDelegate {
+  func didFinishQuote (finished: FinishedQuote)
+}
+
+
 class AddQuoteViewController: UIViewController, NetworkServiceDelegate {
   
   @IBOutlet weak var quoteContentView: QuoteView!
   @IBOutlet weak var newQuoteButtonPressed: UIButton!
   @IBOutlet weak var newPhotoButtonPressed: UIButton!
   
-  var photoOne = Disco()
-  var quoteOne = Literate()
-  var finishedQuote = DeadDiscoLiterate()
+  var photoOne = Photo()
+  var quoteOne = Quote()
+  var finishedQuote = FinishedQuote()
   
   var authorReturn:String = ""
   var quoteReturn:String = ""
@@ -28,6 +33,9 @@ class AddQuoteViewController: UIViewController, NetworkServiceDelegate {
   
 //  var discoDelegate: DiscoDanceDelegate?
   
+  var addQuoteDelegate: AddQuoteViewControllerDelegate?
+ 
+  
   override func viewDidLoad() {
     super.viewDidLoad()
 //    discoDelegate = self as! DiscoDanceDelegate
@@ -36,8 +44,8 @@ class AddQuoteViewController: UIViewController, NetworkServiceDelegate {
     photoOne = networker.getPhoto()
     quoteOne = networker.getQuote()
     
-    quoteOne.author = quoteOne.author
-    quoteOne.quote = quoteOne.quote
+//    quoteOne.author = quoteOne.author
+//    quoteOne.quote = quoteOne.quote
     
     quoteContentView.authorLabel.text = authorReturn
     quoteContentView.quoteLabel.text = quoteReturn
@@ -51,6 +59,7 @@ class AddQuoteViewController: UIViewController, NetworkServiceDelegate {
   }
   
   // MARK: NetworkDelegate Functions
+  
   func didGetQuote(author: String, quote: String) {
     authorReturn = String(describing: author)
     quoteReturn = String(describing: quote)
@@ -82,6 +91,28 @@ class AddQuoteViewController: UIViewController, NetworkServiceDelegate {
   
   @IBAction func saveButtonAction(_ sender: UIButton) {
     //    self.addQuoteDelegate?.saveDiscoLiterate(disco: photoOne, literate: quoteOne)
+//    let renderer = UIGraphicsImageRenderer(size: quoteContentView.bounds.size)
+//    let image = renderer.image { ctx in
+//      view.drawHierarchy(in: view.bounds, afterScreenUpdates: true)
+//    }
+//
+//    finishedQuote.author = quoteOne.author
+//    finishedQuote.quote = quoteOne.quote
+//    finishedQuote.photo = image
+    
+//    print(image)
+//    print(finishedQuote)
+//    discoDelegate?.finshedDance(finished: finishedQuote)
+    
+    didFinishQuote(finished: finishedQuote)
+    
+    dismiss(animated: true, completion: nil)
+    //    performSegue(withIdentifier: "mainViewSegue", sender: self)
+  }
+  
+  
+  
+  func didFinishQuote (finished: FinishedQuote) {
     let renderer = UIGraphicsImageRenderer(size: quoteContentView.bounds.size)
     let image = renderer.image { ctx in
       view.drawHierarchy(in: view.bounds, afterScreenUpdates: true)
@@ -91,13 +122,12 @@ class AddQuoteViewController: UIViewController, NetworkServiceDelegate {
     finishedQuote.quote = quoteOne.quote
     finishedQuote.photo = image
     
-    print(image)
-    print(finishedQuote)
-//    discoDelegate?.finshedDance(finished: finishedQuote)
+      print(image)
     
-    dismiss(animated: true, completion: nil)
-    //    performSegue(withIdentifier: "mainViewSegue", sender: self)
+    self.addQuoteDelegate?.didFinishQuote(finished: finishedQuote)
+    
   }
+  
   
   
   /*
