@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, NetworkServiceDelegate {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DiscoDanceDelegate {
+ 
+  
   
   @IBOutlet weak var mainTableView: UITableView!
   var photoOne = Disco()
@@ -19,13 +21,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   
   var photoURLReturn:String = ""
   
-  var discoLiterateArray = Array<Any>()
+  var discoLiterateArray = Array<DeadDiscoLiterate>()
   
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
-    let networker = NetworkManager()
-    networker.netDelegate = self as NetworkServiceDelegate
+//    let networker = NetworkManager()
+//    networker.netDelegate = self as NetworkServiceDelegate
     
     mainTableView.delegate = self
     mainTableView.dataSource = self
@@ -51,21 +53,42 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     return cell
   }
 
-  // MARK: network delegate functions
-  func didGetQuote(author: String, quote: String) {
-    authorReturn = author
-    quoteReturn = quote
-    DispatchQueue.main.async {
-      self.mainTableView.reloadData()
-    }
+//  // MARK: network delegate functions
+//  func didGetQuote(author: String, quote: String) {
+//    authorReturn = author
+//    quoteReturn = quote
+//    DispatchQueue.main.async {
+//      self.mainTableView.reloadData()
+//    }
+//  }
+//
+//  func didGetPhotoURL(photoURL: String) {
+//    photoURLReturn = photoURL
+//    DispatchQueue.main.async {
+//      self.mainTableView.reloadData()
+//    }
+//  }
+  
+  // MARK: add Quote Delegate function
+  
+  func finshedDance(finished: DeadDiscoLiterate) {
+    discoLiterateArray.append(finished)
   }
   
-  func didGetPhotoURL(photoURL: String) {
-    photoURLReturn = photoURL
-    DispatchQueue.main.async {
-      self.mainTableView.reloadData()
-    }
-  }
-
+//  //MARK: for segue
+//  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//    if segue.identifier == "mainViewSegue"{
+//      if let nextVC = segue.destination as? AddQuoteViewController {
+//        nextVC.discoDelegate = self
+//      }
+//    }
+//  }
+  
+  
+  
+  
+  
+  
+  
 }
 

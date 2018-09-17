@@ -17,6 +17,7 @@ class AddQuoteViewController: UIViewController, NetworkServiceDelegate {
   
   var photoOne = Disco()
   var quoteOne = Literate()
+  var finishedQuote = DeadDiscoLiterate()
   
   var authorReturn:String = ""
   var quoteReturn:String = ""
@@ -24,10 +25,12 @@ class AddQuoteViewController: UIViewController, NetworkServiceDelegate {
   var photoURLReturn:String = ""
   
   var networker = NetworkManager()
-    
+  
+//  var discoDelegate: DiscoDanceDelegate?
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+//    discoDelegate = self as! DiscoDanceDelegate
     networker.netDelegate = self as NetworkServiceDelegate
     
     photoOne = networker.getPhoto()
@@ -79,6 +82,19 @@ class AddQuoteViewController: UIViewController, NetworkServiceDelegate {
   
   @IBAction func saveButtonAction(_ sender: UIButton) {
     //    self.addQuoteDelegate?.saveDiscoLiterate(disco: photoOne, literate: quoteOne)
+    let renderer = UIGraphicsImageRenderer(size: quoteContentView.bounds.size)
+    let image = renderer.image { ctx in
+      view.drawHierarchy(in: view.bounds, afterScreenUpdates: true)
+    }
+    
+    finishedQuote.author = quoteOne.author
+    finishedQuote.quote = quoteOne.quote
+    finishedQuote.photo = image
+    
+//    print(image)
+//    print(finishedQuote)
+//    discoDelegate?.finshedDance(finished: finishedQuote)
+    
     dismiss(animated: true, completion: nil)
     //    performSegue(withIdentifier: "mainViewSegue", sender: self)
   }
