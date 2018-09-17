@@ -10,5 +10,4 @@ import UIKit
 
 class Photo: NSObject {
   var imageLocation = String()
-
 }

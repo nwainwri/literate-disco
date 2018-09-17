@@ -13,11 +13,9 @@ import Nuke
 class QuoteView: UIView {
 
   @IBOutlet var contentView: UIView!
-  
   @IBOutlet weak var quoteLabel: UILabel!
   @IBOutlet weak var authorLabel: UILabel!
   @IBOutlet weak var photoImageView: UIImageView!
-  
   
   override init(frame: CGRect) { // for using CustomView in code
     super.init(frame: frame)
@@ -30,8 +28,6 @@ class QuoteView: UIView {
   }
   
   private func commonInit() {
-    // do stuff here
-    
     Bundle.main.loadNibNamed("QuoteView", owner: self, options: nil)
     addSubview(contentView)
     contentView.frame = self.bounds

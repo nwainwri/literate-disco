@@ -54,6 +54,7 @@
                                             <outlet property="authorLabel" destination="v7E-D2-EEz" id="M8s-Ki-dHJ"/>
                                             <outlet property="quoteImage" destination="dmo-8k-NYb" id="EeH-JD-5fC"/>
                                             <outlet property="quoteLabel" destination="CCP-tl-ZHy" id="fOF-oe-CIg"/>
+                                            <segue destination="tlN-lw-X3D" kind="show" identifier="showFinishedSegue" id="qWh-9c-UbB"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -125,8 +126,10 @@
                                 <rect key="frame" x="16" y="294" width="137" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <state key="normal" title="New Quote"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="New Quote">
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="quoteButtonAction:" destination="tlN-lw-X3D" eventType="touchUpInside" id="IP8-Kn-mPk"/>
                                 </connections>
@@ -135,8 +138,10 @@
                                 <rect key="frame" x="16" y="332" width="137" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <state key="normal" title="New Photo"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="New Photo">
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="photoButtonAction:" destination="tlN-lw-X3D" eventType="touchUpInside" id="6aZ-JH-uCF"/>
                                 </connections>
@@ -145,7 +150,7 @@
                                 <rect key="frame" x="16" y="370" width="75" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="Save">
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -153,19 +158,50 @@
                                     <action selector="saveButtonAction:" destination="tlN-lw-X3D" eventType="touchUpInside" id="hJ8-Kr-fCc"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vE-5W-KRJ">
+                                <rect key="frame" x="16" y="422" width="75" height="34"/>
+                                <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Share!">
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareButtonAction:" destination="tlN-lw-X3D" eventType="touchUpInside" id="UAP-OJ-ZEI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9I-Ty-JG7">
+                                <rect key="frame" x="16" y="464" width="75" height="33"/>
+                                <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="doneButtonAction:" destination="tlN-lw-X3D" eventType="touchUpInside" id="PPk-C9-T6j"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="c9I-Ty-JG7" firstAttribute="top" secondItem="qVr-mI-VrE" secondAttribute="top" constant="444" id="3D8-lc-5ba"/>
                             <constraint firstItem="PeA-Ec-iyk" firstAttribute="top" secondItem="qVr-mI-VrE" secondAttribute="top" constant="-20" id="5AY-Cn-P9F"/>
                             <constraint firstItem="PeA-Ec-iyk" firstAttribute="leading" secondItem="qVr-mI-VrE" secondAttribute="leading" id="CKJ-EH-fvN"/>
+                            <constraint firstItem="c9I-Ty-JG7" firstAttribute="leading" secondItem="qVr-mI-VrE" secondAttribute="leading" constant="16" id="FqB-on-4GU"/>
+                            <constraint firstItem="qVr-mI-VrE" firstAttribute="trailing" secondItem="c9I-Ty-JG7" secondAttribute="trailing" constant="284" id="Kpi-3S-24d"/>
+                            <constraint firstItem="qVr-mI-VrE" firstAttribute="trailing" secondItem="9vE-5W-KRJ" secondAttribute="trailing" constant="284" id="VFb-OJ-xlv"/>
+                            <constraint firstItem="9vE-5W-KRJ" firstAttribute="top" secondItem="qVr-mI-VrE" secondAttribute="top" constant="402" id="VhH-Fv-a0R"/>
+                            <constraint firstItem="9vE-5W-KRJ" firstAttribute="leading" secondItem="qVr-mI-VrE" secondAttribute="leading" constant="16" id="Xgb-As-eHD"/>
                             <constraint firstItem="PeA-Ec-iyk" firstAttribute="width" secondItem="dyi-v8-Xkr" secondAttribute="height" multiplier="340:667" constant="35" id="ZFF-pl-nHm"/>
+                            <constraint firstItem="qVr-mI-VrE" firstAttribute="bottom" secondItem="9vE-5W-KRJ" secondAttribute="bottom" constant="211" id="fyi-DM-VAE"/>
+                            <constraint firstItem="qVr-mI-VrE" firstAttribute="bottom" secondItem="c9I-Ty-JG7" secondAttribute="bottom" constant="170" id="veh-3c-0hE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qVr-mI-VrE"/>
                     </view>
                     <connections>
+                        <outlet property="doneButtonPressed" destination="c9I-Ty-JG7" id="uC6-W9-pJ3"/>
                         <outlet property="newPhotoButtonPressed" destination="SxJ-NQ-fkj" id="j9p-ec-cLr"/>
                         <outlet property="newQuoteButtonPressed" destination="34v-Yf-IMp" id="4uI-lx-Fwe"/>
                         <outlet property="quoteContentView" destination="PeA-Ec-iyk" id="F22-nj-P06"/>
+                        <outlet property="saveButtonPressed" destination="CBx-J1-djC" id="ded-jb-jHk"/>
+                        <outlet property="shareButtonPressed" destination="9vE-5W-KRJ" id="Hc7-Hg-kzE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kmW-Le-drF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -173,4 +209,7 @@
             <point key="canvasLocation" x="1172" y="121.88905547226388"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="qWh-9c-UbB"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -9,8 +9,6 @@
 import UIKit
 
 class Quote: NSObject {
-  // for quotes
-  
   var author = String()
   var quote = String()
 

@@ -13,12 +13,14 @@ protocol AddQuoteViewControllerDelegate {
   func didFinishQuote (finished: FinishedQuote)
 }
 
-
 class AddQuoteViewController: UIViewController, NetworkServiceDelegate {
   
   @IBOutlet weak var quoteContentView: QuoteView!
   @IBOutlet weak var newQuoteButtonPressed: UIButton!
   @IBOutlet weak var newPhotoButtonPressed: UIButton!
+  @IBOutlet weak var saveButtonPressed: UIButton!
+  @IBOutlet weak var shareButtonPressed: UIButton!
+  @IBOutlet weak var doneButtonPressed: UIButton!
   
   var photoOne = Photo()
   var quoteOne = Quote()
@@ -26,30 +28,35 @@ class AddQuoteViewController: UIViewController, NetworkServiceDelegate {
   
   var authorReturn:String = ""
   var quoteReturn:String = ""
+  var photoReturn:UIImage?
   
   var photoURLReturn:String = ""
-  
   var networker = NetworkManager()
-  
-//  var discoDelegate: DiscoDanceDelegate?
-  
   var addQuoteDelegate: AddQuoteViewControllerDelegate?
- 
   
   override func viewDidLoad() {
     super.viewDidLoad()
-//    discoDelegate = self as! DiscoDanceDelegate
+
     networker.netDelegate = self as NetworkServiceDelegate
     
-    photoOne = networker.getPhoto()
-    quoteOne = networker.getQuote()
-    
-//    quoteOne.author = quoteOne.author
-//    quoteOne.quote = quoteOne.quote
-    
+    if photoReturn == nil {
+      photoOne = networker.getPhoto()
+      quoteOne = networker.getQuote()
+      newQuoteButtonPressed.isHidden = false
+      newPhotoButtonPressed.isHidden = false
+      saveButtonPressed.isHidden = false
+      shareButtonPressed.isHidden = true
+      doneButtonPressed.isHidden = true
+    } else {
+      newQuoteButtonPressed.isHidden = true
+      newPhotoButtonPressed.isHidden = true
+      saveButtonPressed.isHidden = true
+      shareButtonPressed.isHidden = false
+      doneButtonPressed.isHidden = false
+    }
     quoteContentView.authorLabel.text = authorReturn
     quoteContentView.quoteLabel.text = quoteReturn
-    quoteContentView.photoImageView.image = UIImage(named: "testImage")
+    quoteContentView.photoImageView.image = photoReturn
     // Do any additional setup after loading the view.
   }
   
@@ -90,54 +97,34 @@ class AddQuoteViewController: UIViewController, NetworkServiceDelegate {
   }
   
   @IBAction func saveButtonAction(_ sender: UIButton) {
-    //    self.addQuoteDelegate?.saveDiscoLiterate(disco: photoOne, literate: quoteOne)
-//    let renderer = UIGraphicsImageRenderer(size: quoteContentView.bounds.size)
-//    let image = renderer.image { ctx in
-//      view.drawHierarchy(in: view.bounds, afterScreenUpdates: true)
-//    }
-//
-//    finishedQuote.author = quoteOne.author
-//    finishedQuote.quote = quoteOne.quote
-//    finishedQuote.photo = image
-    
-//    print(image)
-//    print(finishedQuote)
-//    discoDelegate?.finshedDance(finished: finishedQuote)
-    
     didFinishQuote(finished: finishedQuote)
-    
     dismiss(animated: true, completion: nil)
-    //    performSegue(withIdentifier: "mainViewSegue", sender: self)
   }
   
+  @IBAction func shareButtonAction(_ sender: UIButton) {
+    let postText: String = "Here's a great quote. 😅"
+    let postImage: UIImage = photoReturn!
+    let activityItems = [postText, postImage] as [Any]
+    let activityController = UIActivityViewController(
+      activityItems: activityItems,
+      applicationActivities: nil
+    )
+    self.present(activityController, animated: true, completion: nil)
+  }
   
+  @IBAction func doneButtonAction(_ sender: Any) {
+    dismiss(animated: true, completion: nil)
+  }
   
+  //MARK: Delegate functions
   func didFinishQuote (finished: FinishedQuote) {
     let renderer = UIGraphicsImageRenderer(size: quoteContentView.bounds.size)
     let image = renderer.image { ctx in
       view.drawHierarchy(in: view.bounds, afterScreenUpdates: true)
     }
-    
     finishedQuote.author = quoteOne.author
     finishedQuote.quote = quoteOne.quote
     finishedQuote.photo = image
-    
-      print(image)
-    
     self.addQuoteDelegate?.didFinishQuote(finished: finishedQuote)
-    
   }
-  
-  
-  
-  /*
-   // MARK: - Navigation
-   
-   // In a storyboard-based application, you will often want to do a little preparation before navigation
-   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-   // Get the new view controller using segue.destinationViewController.
-   // Pass the selected object to the new view controller.
-   }
-   */
-  
 }

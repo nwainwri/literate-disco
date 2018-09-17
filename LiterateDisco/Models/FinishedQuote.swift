@@ -9,7 +9,6 @@
 import UIKit
 
 class FinishedQuote: NSObject {
-  
   var author = String()
   var quote = String()
   var photo = UIImage()

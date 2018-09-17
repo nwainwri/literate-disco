@@ -8,8 +8,6 @@
 
 import Foundation
 import UIKit
-import Nuke
-
 
 class NetworkManager {
   
@@ -18,7 +16,6 @@ class NetworkManager {
   // QUOTE RANDOM; POST:
   // http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json
   
-  // MARK: HAVE THIS RETURN A 'LITERATE' TUPLE
   func getQuote() -> (Quote){
     //    func getQuote() -> (author: String, quote: String){
     let quoteReturned = Quote()
@@ -61,12 +58,6 @@ class NetworkManager {
       
       replyData.author = json["quoteAuthor"] as! String
       replyData.quote = json["quoteText"] as! String
-      //      print("title:: \(replyData.author)")
-      //
-      //      print("title:: \(replyData.quote)")
-      
-      // need to put in delete to notify main page once data received.
-      // MARK: UPATE DELEGATE TO PASS AROUND LITERATE OBJECTS
       self.netDelegate?.didGetQuote(author: replyData.author, quote: replyData.quote)
     }
     task.resume()
@@ -117,8 +108,7 @@ class NetworkManager {
         return
       }
       photoGotten.imageLocation = link
-//      print("LINK URL: \(link)")
-      
+  
       guard let response = response as? HTTPURLResponse else {
         print("no response returned from server \(String(describing: error))")
         return
