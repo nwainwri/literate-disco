@@ -36,7 +36,7 @@ class AddQuoteViewController: UIViewController, NetworkServiceDelegate {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-
+      
     networker.netDelegate = self as NetworkServiceDelegate
     
     if photoReturn == nil {
@@ -48,6 +48,9 @@ class AddQuoteViewController: UIViewController, NetworkServiceDelegate {
       shareButtonPressed.isHidden = true
       doneButtonPressed.isHidden = true
     } else {
+      quoteContentView.photoImageView.image = photoReturn
+      quoteContentView.photoImageView.contentMode = .scaleAspectFill // doesn't work
+      
       newQuoteButtonPressed.isHidden = true
       newPhotoButtonPressed.isHidden = true
       saveButtonPressed.isHidden = true

@@ -12,7 +12,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   @IBOutlet weak var mainTableView: UITableView!
 
   var finishedQuotes = Array<FinishedQuote>()
-  var currentRow = 0
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -39,10 +38,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   }
 
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    currentRow = indexPath.row
     performSegue(withIdentifier: "showFinishedSegue", sender: self)
   }
-  
   
   //MARK: add button
   @IBAction func addButtonPressed(_ sender: UIButton) {
@@ -59,14 +56,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   //MARK: for segue
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     super.prepare(for: segue, sender: sender)
-    switch(segue.identifier ?? "") {
-    case "addVCSegue":
-      print("Adding a quote")// should just go next
-    case "showFinishedSegue":
-      print("showing an old quote")
-    default:
-      fatalError("Unexpected Segue Identifier; \(String(describing: segue.identifier))")
-    }
     
     if segue.identifier == "addVCSegue"{
       if let nextVC = segue.destination as? AddQuoteViewController {
@@ -74,7 +63,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
       }
     } else if segue.identifier == "showFinishedSegue"{
       if let nextVC = segue.destination as? AddQuoteViewController {
-        nextVC.photoReturn = finishedQuotes[currentRow].photo
+        nextVC.photoReturn = finishedQuotes[mainTableView.indexPathForSelectedRow?.row ?? 0].photo
         nextVC.addQuoteDelegate = self
       }
     }
