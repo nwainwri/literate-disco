@@ -6,6 +6,7 @@
 //  Copyright © 2018 Nathan Wainwright. All rights reserved.
 //
 import UIKit
+import Parse
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AddQuoteViewControllerDelegate {
 
@@ -18,6 +19,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // Do any additional setup after loading the view, typically from a nib.
     mainTableView.delegate = self
     mainTableView.dataSource = self
+    loadDataFromParse()
   }
   
   override func didReceiveMemoryWarning() {
@@ -68,5 +70,51 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
       }
     }
   }
+  
+  //MARK: parse load data func
+  func loadDataFromParse() {
+
+    let query = PFQuery(className:"FinishedQuote")
+    query.findObjectsInBackground { (objects, error) in
+      guard let objects = objects else {
+        print("Err")
+        return
+      }
+      self.finishedQuotes = objects.map({ (parseQuote: PFObject) -> FinishedQuote in
+        let finishedQuote = FinishedQuote()
+        finishedQuote.author = parseQuote["author"] as! String
+        finishedQuote.quote = parseQuote["quote"] as! String
+        
+        let imageFile = parseQuote["imageFile"] as? PFFile
+        imageFile?.getDataInBackground (block: { (data, error) -> Void in
+          if error == nil {
+            if let imageData = data {
+              finishedQuote.photo = UIImage(data:imageData)!
+            }
+          }
+        })
+        return finishedQuote
+      })
+      OperationQueue.main.addOperation {
+        self.mainTableView.reloadData()
+      }
+
+    }
+
+    
+    
+    
+    
+  }
+    
+    
+  
+  
+  
+  
+  
+  
+  
+  
 }
 

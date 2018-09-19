@@ -7,5 +7,6 @@ target 'LiterateDisco' do
 
   # Pods for LiterateDisco
   pod 'Nuke'
+  pod 'Parse'
 
 end

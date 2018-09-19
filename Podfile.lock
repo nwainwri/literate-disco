@@ -1,16 +1,26 @@
 PODS:
+  - Bolts/Tasks (1.9.0)
   - Nuke (7.3.2)
+  - Parse (1.17.1):
+    - Parse/Core (= 1.17.1)
+  - Parse/Core (1.17.1):
+    - Bolts/Tasks (~> 1.9)
 
 DEPENDENCIES:
   - Nuke
+  - Parse
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Bolts
     - Nuke
+    - Parse
 
 SPEC CHECKSUMS:
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   Nuke: a9a31bbd6c6723753ab024ef22057dcaaf046c1b
+  Parse: d3edaf8c7c722cb33cb83ba7821d015ae32d362d
 
-PODFILE CHECKSUM: cedb383684008f73dfba52f35620e00a660bdc05
+PODFILE CHECKSUM: 77f7f3a59ac29520859e9357e2fc998361567649
 
 COCOAPODS: 1.5.3

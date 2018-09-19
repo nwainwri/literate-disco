@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Parse
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
+    
+    let configuration = ParseClientConfiguration { clientConfiguration in
+      clientConfiguration.applicationId = "quoteProDiscoLiterate"
+      clientConfiguration.server = "http://192.168.88.181:1337/parse"
+    }
+    Parse.initialize(with: configuration)
+    
     return true
   }
 

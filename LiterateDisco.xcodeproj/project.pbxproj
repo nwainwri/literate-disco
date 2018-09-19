@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D07FF261C5DF12E7A36B5388 /* Pods_LiterateDisco.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A22973DDFD2D3A17D10EC6 /* Pods_LiterateDisco.framework */; };
+		F159766F2151E07100726E1C /* FinishedQuoteParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F159766E2151E07100726E1C /* FinishedQuoteParse.swift */; };
 		F15FF9A6214F2777001DFBD1 /* FinishedQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15FF9A5214F2777001DFBD1 /* FinishedQuote.swift */; };
 		F1AEE5E02149F0BD00688ADC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AEE5DF2149F0BD00688ADC /* AppDelegate.swift */; };
 		F1AEE5E22149F0BD00688ADC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AEE5E12149F0BD00688ADC /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 		0C270E114D3FBABA1A8DBBD1 /* Pods-LiterateDisco.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiterateDisco.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiterateDisco/Pods-LiterateDisco.debug.xcconfig"; sourceTree = "<group>"; };
 		1F538A8558623C4A2EBB13B8 /* Pods-LiterateDisco.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiterateDisco.release.xcconfig"; path = "Pods/Target Support Files/Pods-LiterateDisco/Pods-LiterateDisco.release.xcconfig"; sourceTree = "<group>"; };
 		78A22973DDFD2D3A17D10EC6 /* Pods_LiterateDisco.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LiterateDisco.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F159766E2151E07100726E1C /* FinishedQuoteParse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedQuoteParse.swift; sourceTree = "<group>"; };
 		F15FF9A5214F2777001DFBD1 /* FinishedQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedQuote.swift; sourceTree = "<group>"; };
 		F1AEE5DC2149F0BD00688ADC /* LiterateDisco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiterateDisco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1AEE5DF2149F0BD00688ADC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				F1AEE5F9214A090800688ADC /* Photo.swift */,
 				F1AEE5F7214A088200688ADC /* Quote.swift */,
 				F15FF9A5214F2777001DFBD1 /* FinishedQuote.swift */,
+				F159766E2151E07100726E1C /* FinishedQuoteParse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -218,11 +221,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LiterateDisco/Pods-LiterateDisco-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
+				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -240,6 +247,7 @@
 				F1D7A2D7214B5C7800D89178 /* NetworkServiceDelegate.swift in Sources */,
 				F1AEE5F22149F1F100688ADC /* NetworkManager.swift in Sources */,
 				F1CB5918214E294400C72F14 /* QuoteView.swift in Sources */,
+				F159766F2151E07100726E1C /* FinishedQuoteParse.swift in Sources */,
 				F15FF9A6214F2777001DFBD1 /* FinishedQuote.swift in Sources */,
 				F1AEE5E22149F0BD00688ADC /* ViewController.swift in Sources */,
 				F1AEE5F8214A088200688ADC /* Quote.swift in Sources */,

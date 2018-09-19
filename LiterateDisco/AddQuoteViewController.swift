@@ -8,6 +8,7 @@
 
 import UIKit
 import Nuke
+import Parse
 
 protocol AddQuoteViewControllerDelegate {
   func didFinishQuote (finished: FinishedQuote)
@@ -61,6 +62,16 @@ class AddQuoteViewController: UIViewController, NetworkServiceDelegate {
     quoteContentView.quoteLabel.text = quoteReturn
     quoteContentView.photoImageView.image = photoReturn
     // Do any additional setup after loading the view.
+    
+    
+    
+    
+    
+    
+    
+    
+    
+//    testCall()
   }
   
   override func didReceiveMemoryWarning() {
@@ -85,6 +96,7 @@ class AddQuoteViewController: UIViewController, NetworkServiceDelegate {
       return
     }
     DispatchQueue.main.async {
+      self.photoURLReturn = url.absoluteString
       Nuke.loadImage(with: url, into: self.quoteContentView.photoImageView)
       self.quoteContentView.reloadInputViews()
     }
@@ -102,6 +114,8 @@ class AddQuoteViewController: UIViewController, NetworkServiceDelegate {
   @IBAction func saveButtonAction(_ sender: UIButton) {
     didFinishQuote(finished: finishedQuote)
     dismiss(animated: true, completion: nil)
+    
+    
   }
   
   @IBAction func shareButtonAction(_ sender: UIButton) {
@@ -129,5 +143,61 @@ class AddQuoteViewController: UIViewController, NetworkServiceDelegate {
     finishedQuote.quote = quoteOne.quote
     finishedQuote.photo = image
     self.addQuoteDelegate?.didFinishQuote(finished: finishedQuote)
+    saveQuoteToParseServer()
   }
+  
+  
+  
+  
+  func saveQuoteToParseServer() {
+    let finishedQuoteParse = PFObject(className:"FinishedQuote")
+    finishedQuoteParse["author"] = finishedQuote.author
+    finishedQuoteParse["quote"] = finishedQuote.quote
+    finishedQuoteParse["photo"] = photoURLReturn
+    
+    var trimmedString = finishedQuote.author
+//    trimmedString = trimmedString.trimmingCharacters(in: CharacterSet.urlPathAllowed.inverted)
+
+    let nonWhiteCharacters = trimmedString.unicodeScalars.filter {
+      false == NSCharacterSet.whitespacesAndNewlines.contains($0)
+      }.map(Character.init)
+    let whitespacelessNumber = String(nonWhiteCharacters)
+
+    
+    let imageData = UIImagePNGRepresentation(finishedQuote.photo)
+    let imageFile = PFFile(name:"\(whitespacelessNumber).png", data:imageData!)
+    
+//    var userPhoto = PFObject(className:"UserPhoto")
+    finishedQuoteParse["imageName"] = "\(whitespacelessNumber)"
+    finishedQuoteParse["imageFile"] = imageFile
+//    userPhoto.saveInBackground()
+    
+    
+    finishedQuoteParse.saveInBackground {
+      (success: Bool, error: Error?) in
+      if (success) {
+        // The object has been saved.
+      } else {
+        // There was a problem, check error.description
+      }
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 }
